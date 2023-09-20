@@ -17,7 +17,7 @@ namespace Battle_Command
       Sonido.SonidoIntro();
       Thread hiloTitulo = new Thread(new ThreadStart(MostrarTituloAnimado));
       hiloTitulo.Start();
-      Thread.Sleep(2500);
+      Thread.Sleep(3000);
       detenerAnim = true;
       hiloTitulo.Join(); // Esperar a que el hilo termine
       jugador1 = Jugador.PedirNombreJugador();
