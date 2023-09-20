@@ -14,14 +14,15 @@ namespace Battle_Command
 
     public static void Main(string[] args)
     {
-      SonidoIntro();
+      Sonido.SonidoIntro();
       Thread hiloTitulo = new Thread(new ThreadStart(MostrarTituloAnimado));
       hiloTitulo.Start();
-      Thread.Sleep(3000);
+      Thread.Sleep(2500);
       detenerAnim = true;
       hiloTitulo.Join(); // Esperar a que el hilo termine
       jugador1 = Jugador.PedirNombreJugador();
       Historia historia = new Historia();
+      Sonido.SonidoIntro2(); // Trucazo: así muestro la bienvenida
       historia.NavegarHistoria("H001_Intro", jugador1);
       Console.ReadKey();
 
@@ -101,13 +102,6 @@ namespace Battle_Command
       Console.ForegroundColor = ConsoleColor.Gray;
       Console.WriteLine();
       Console.SetCursorPosition(0, 6);
-    }
-
-    public static void SonidoIntro()
-    {
-      Console.Beep(300, 700);
-      Console.Beep(500, 500);
-      Console.Beep(650, 900);
     }
   }
 }

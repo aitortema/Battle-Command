@@ -107,7 +107,6 @@ namespace Battle_Command
       //int numOpciones = opciones.Length;
 
       Programa.MostrarTituloFijo();
-      Console.Write("Has elegido la puerta izquierda. ");
       Console.WriteLine();
       Console.WriteLine("Aparentemente no hay nadie en la habitación. ");
       Console.WriteLine("Miras alrededor. Es un despacho. ");
@@ -133,7 +132,6 @@ namespace Battle_Command
       int numOpciones = opciones.Length;
 
       Programa.MostrarTituloFijo();
-      Console.Write("Has elegido la puerta derecha. ");
       Console.WriteLine();
       Console.WriteLine("La habitación está oscura. ");
       Console.WriteLine("Aparentemente no hay nadie. ");
@@ -157,7 +155,6 @@ namespace Battle_Command
       string[] opciones = { "Volver al pasillo. " };
 
       Programa.MostrarTituloFijo();
-      Console.Write("Has elegido leer el cuaderno. ");
       Console.WriteLine();
       Console.WriteLine("Nota: ");
       Console.WriteLine("Hace dos semanas que Petra se comporta de manera extraña. ");
@@ -185,11 +182,9 @@ namespace Battle_Command
       string[] opciones = { "Intenta neutralizar al objetivo. ", "¡Cierra la puerta!" };
 
       Programa.MostrarTituloFijo();
-      Console.Write("Has elegido encender la linterna. ");
-      Console.WriteLine("Miras alrededor. Es la habitación de Petra.");
-      Console.WriteLine("En la cama hay ropa manchada de sangre. ");
-      Console.Beep(400, 500);
-      Console.WriteLine("Escuchas algo. ");
+      Sonido.SonidoPasos();
+      Console.WriteLine("¡Escuchas algo! ");
+      Console.WriteLine("Es la habitación de Petra.");
       Console.WriteLine("¡Hay algo detrás de la puerta! ");
       Console.WriteLine("¿Qué quieres hacer? ");
       Console.WriteLine();
@@ -212,7 +207,8 @@ namespace Battle_Command
 
       Programa.MostrarTituloFijo();
       Console.Write("Has elegido intentar neutralizar al objetivo. ");
-      Console.WriteLine("PIM, PAM; PUM ");
+      Console.WriteLine("¡PIM! ¡PAM! ¡PUM! ");
+      Console.WriteLine();
       for (int i = 0; i < opciones.Length; i++)
       {
         Console.WriteLine(opciones[i]);
